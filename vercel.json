@@ -1,15 +1,13 @@
 {
-    "node": "deploy-na-vercel",
     "version": 2,
-    "public": true,
-    "build": {
+    "builds": [
+      {
         "src": "index.js",
-       "use":"@vercel/node"
-    },
+        "use": "@vercel/node"
+      }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/index.js"
-        }
+      { "src": "/(.*)", "dest": "index.js" }
     ]
-}
+  }
+  
