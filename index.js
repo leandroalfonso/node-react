@@ -11,9 +11,9 @@ app.use(express.json())
 
 const db = mysql2.createPool({
     host: 'sql.freedb.tech',    
-    password:'4jvEN!EyQ3TJ3k&',
+    password:'b2yF3D*Bw&3eVX3',
     user: 'freedb_leandro_bd3',
-    database: 'freedb_leiloes'
+    database: 'freedb_colaborador_bd'
 })
 
 
@@ -30,7 +30,7 @@ app.post('/upload', async (req, res) => {
 
 // Endpoint para obter dados
 app.get('/dados', async (req, res) => {
-    const [rows, fields] = await db.execute('SELECT * FROM lailao')
+    const [rows, fields] = await db.execute('SELECT * FROM usuarios');
     res.send(rows)
 })
 
